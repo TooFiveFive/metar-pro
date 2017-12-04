@@ -9,7 +9,11 @@ def runway_headings(airport):
 
     for child in json_file:
         if child['airport_ident'] == airport:
-            array_of_runway_headings.append(child['le_heading_degT'])
+            array_of_runway_headings.append(child['he_heading_degT'])
+
+    for runway in array_of_runway_headings:
+        if isinstance(runway, str):
+            array_of_runway_headings.remove(runway)
 
     return array_of_runway_headings
 
