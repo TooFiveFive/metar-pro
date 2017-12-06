@@ -2,7 +2,7 @@ import json
 
 
 def runway_headings(airport):
-    file = open('python/runways.json').read()
+    file = open('runways.json').read()
     json_file = json.loads(file)
 
     array_of_runway_headings = []

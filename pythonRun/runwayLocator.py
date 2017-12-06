@@ -2,7 +2,7 @@ import json
 
 
 def runway_lat_long(need_index, index, airport):
-    file = open('python/runways.json').read()
+    file = open('runways.json').read()
     json_file = json.loads(file)
     array_of_runway_headings = []
     he_array_of_runway_lat = []
