@@ -79,13 +79,14 @@ input[type="text"] {
     background-color: rgba(0,0,0,0);
     font-weight: bold;
     color: rgb(255, 255, 255);
+    text-transform: uppercase;
 }
 input[type="text"]:focus {
     outline: none;
 }
 input[type="text"]::placeholder {
     color: rgba(255, 255, 255, 0.53);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: normal;
 }
 input[type="submit"] {

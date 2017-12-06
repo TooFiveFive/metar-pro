@@ -5,8 +5,15 @@ block content
         h1 This is the runway you'll land on at
             strong= " " + airport
         div(id="map", style="width:800px; left:50%; position:fixed; margin-left:-400px; height:500px;")
+        if !message
+            script.
+                window.onload = function () {
+                    window.location = "/error";
+                }
+
         script.
             function myMap() {
+
                 var coords = #{message};
                 var he = new google.maps.LatLng(coords[0][0], coords[0][1]);
                 var le = new google.maps.LatLng(coords[1][0], coords[1][1]);
@@ -23,12 +30,12 @@ block content
                 var flightPath = new google.maps.Polyline({
                     path: [he, le],
                     strokeColor: "#ff050c",
-                    strokeOpacity: 0.8,
+                    strokeOpacity: 0.6,
                     icons: [{
                         icon: lineSymbol,
                         offset: '100%'
                     }],
-                    strokeWeight: 6
+                    strokeWeight: 8
                 });
                 flightPath.setMap(map);
             }
