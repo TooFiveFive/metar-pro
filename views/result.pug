@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1 loading your data. PLEASE WAIT!!!!!!!
+    form(id="form", style="display: none;", action="/result_display", method="POST", name="send")
+        input(name="airport_id", type="text", value=airport)
+        input(type='submit')
+
+
+    script.
+        window.onload = function () {
+            setTimeout(function () {
+                document.getElementsByTagName("form")[0].submit();
+            }, 5000);
+
+        }
+
+

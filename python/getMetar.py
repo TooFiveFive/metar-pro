@@ -10,6 +10,7 @@ def parser(index, airport, hours_before):
     root = ElementTree.parse(url.urlopen(request)).getroot()
 
     # elementTree converts xml into array  .text is the text in that element
+
     return root[6][0][index].text
 
 

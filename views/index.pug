@@ -1,5 +1,7 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Enter data
+  form(action="/result", method="POST")
+      input(name="airport_id", type="text")
+      input(type='submit')
