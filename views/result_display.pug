@@ -1,4 +1,36 @@
 extends layout
 
 block content
-    h1= "data for " + airport + " = " + message
+    div(id="result_display")
+        h1 This is the runway you'll land on at
+            strong= " " + airport
+        div(id="map", style="width:800px; left:50%; position:fixed; margin-left:-400px; height:500px;")
+        script.
+            function myMap() {
+                var coords = #{message};
+                var he = new google.maps.LatLng(coords[0][0], coords[0][1]);
+                var le = new google.maps.LatLng(coords[1][0], coords[1][1]);
+
+
+                var mapCanvas = document.getElementById("map");
+                var mapOptions = {center: he, zoom: 14, mapTypeId: google.maps.MapTypeId.HYBRID};
+                var map = new google.maps.Map(mapCanvas, mapOptions);
+
+                var lineSymbol = {
+                    path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW
+                };
+
+                var flightPath = new google.maps.Polyline({
+                    path: [he, le],
+                    strokeColor: "#ff050c",
+                    strokeOpacity: 0.8,
+                    icons: [{
+                        icon: lineSymbol,
+                        offset: '100%'
+                    }],
+                    strokeWeight: 6
+                });
+                flightPath.setMap(map);
+            }
+        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6Xy7sT8guiw07c8rxKuGCJ9nHfbmEZYw&callback=myMap")
+        a(href="/") Click here to start another query

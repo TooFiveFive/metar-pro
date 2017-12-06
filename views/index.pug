@@ -1,7 +1,9 @@
 extends layout
 
 block content
-  h1 Enter data
-  form(action="/result", method="POST")
-      input(name="airport_id", type="text")
-      input(type='submit')
+
+    div(id="home")
+        h1 This webapp uses live <strong>METAR AND RUNWAY DATA</strong> to find the runway a plane would land on.
+        form(action="/result", method="POST")
+            input(name="airport_id", type="text", placeholder="Airport ICAO code (USE CAPS)")
+            input(type='submit')

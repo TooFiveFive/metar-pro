@@ -1,8 +1,102 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    text-align: center;
+    font: 12px "Montserrat", Helvetica, Arial, sans-serif;
+}
+#home {
+    padding-top: 10%;
+    background: url('wallpaper.jpg') no-repeat no-repeat 30% 30%;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.58);
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    color: #ffffff;
+}
+#result {
+    padding-top: 10%;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    color: #000000;
+    animation: fade 1s ease-in-out;
+    animation-iteration-count: 1;
+}
+#result_display {
+    padding-top: 5%;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    color: #000000;
+}
+#map {
+    -webkit-box-shadow: 0 0 158px -26px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 0 158px -26px rgba(0,0,0,0.75);
+    box-shadow: 0 0 158px -26px rgba(0,0,0,0.75);
+    animation: fade 1s ease-in-out;
+    animation-iteration-count: 1;
+}
+a, a:visited, a:active {
+    padding-top: 20px;
+    text-decoration: none;
+    color: #1e1e1e;
+    font-size: 15px;
+    font-weight: bold;
+    transition: color .5s;
+}
+a:hover {
+    color: #5e5e5e;
+}
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
-a {
-  color: #00B7FF;
+h1 {
+
+    padding: 40px;
+}
+strong {
+    font-size: 26px;
+    color: #4c4c4c;
+}
+
+
+input[type="text"] {
+    border: 0;
+    border-bottom: solid #ffffff 4px;
+    width: 200px;
+    font: 20px "Montserrat", Helvetica, Arial, sans-serif;
+    background-color: rgba(0,0,0,0);
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+input[type="text"]:focus {
+    outline: none;
+}
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.53);
+    font-size: 13px;
+    font-weight: normal;
+}
+input[type="submit"] {
+    border: 0;
+    border-bottom: solid #ffffff 4px;
+    background: #ffffff;
+    font: 20px "Montserrat", Helvetica, Arial, sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #2f2f2f
+}
+input[type="submit"]:focus {
+    outline: none;
 }

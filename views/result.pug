@@ -1,10 +1,12 @@
 extends layout
 
 block content
-    h1 loading your data. PLEASE WAIT!!!!!!!
-    form(id="form", style="display: none;", action="/result_display", method="POST", name="send")
-        input(name="airport_id", type="text", value=airport)
-        input(type='submit')
+    div(id="result")
+        h1 loading your data. PLEASE WAIT!!!!!!!
+        img(src="progress.gif")
+        form(id="form", style="display: none;", action="/result_display", method="POST", name="send")
+            input(name="airport_id", type="text", value=airport)
+            input(type='submit')
 
 
     script.
