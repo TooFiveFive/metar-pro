@@ -13,6 +13,15 @@ router.post('/', function(req, res) {
         console.log(message);
         _.data = message;
     });
+    middleware.pyshell[middleware.pyshell.length - 1].end(function (err) {
+        if (err) {
+
+            _.data = "error";
+            console.log(err, middleware.pyshell[middleware.pyshell.length - 1]);
+
+        }
+        console.log('finished');
+    });
 
     console.log(airport_id);
     res.render('result', {airport: airport_id, title: 'Loading - ' + airport_id});

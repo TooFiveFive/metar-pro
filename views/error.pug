@@ -1,6 +1,10 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+    div(id="error")
+        h2 ERROR
+        p There was an error in the backend. It might be our fault but its probably
+            b=  " yours!"
+        br
+        a(href="/") Try entering a valid query
+

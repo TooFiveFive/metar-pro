@@ -4,21 +4,13 @@ var options = {
     scriptPath: 'python/'
 };
 
-var pyshell = [];
+var pyshell = []; //array of ALL backend queries - used for displaying query history
 
-
+//this file restricts access to the back end by only allowing front end to access the output of the python backend #IBM-level_security
 function get_data(airport) {
     pyshell.push(new PythonShell('base.py', options));
 
     pyshell[pyshell.length - 1].send(airport);
-
-    pyshell[pyshell.length - 1].end(function (err) {
-        if (err) {
-            console.log(err);
-            pyshell[pyshell.length - 1] = null;
-        }
-        console.log('finished');
-    });
 
 }
 
