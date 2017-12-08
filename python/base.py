@@ -7,12 +7,13 @@ from runwayLocator import runway_lat_long
 
 def cmd_input():
     airport = input()
+    directory = input()
 
-    print(output(airport))
+    print(output(airport, directory))
 
 
-def output(arrival_airport):
-    runway_directions = runway_headings(arrival_airport)
+def output(arrival_airport, directory):
+    runway_directions = runway_headings(arrival_airport, directory)
     # remember to check if ints exists
 
     hours_ahead = str(time())
@@ -21,7 +22,7 @@ def output(arrival_airport):
 
     runway_index = runway_picker(runway_directions, wind_direction)
 
-    runway_reference_arrival = runway_lat_long(1, runway_index, arrival_airport)
+    runway_reference_arrival = runway_lat_long(1, runway_index, arrival_airport, directory)
 
     # runway_reference_departure = runway_lat_long(0, runway_index, departure_airport)
 

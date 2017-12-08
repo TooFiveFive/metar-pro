@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    div(id="ext")
+        h1= title
+        p(style="font-size: 18px;")= "Raw METAR = "
+            b= data[0]
+        br
+        p(style="font-size: 18px;")= "Wind direction (degrees)= "
+            b= data[1]
+        br
+        p(style="font-size: 18px;")= "Wind speed (knots) = "
+            b= data[2]
+        br
+        p(style="font-size: 18px;")= "Runway headers (degrees) = "
+            b= data[3]
+        br
+        p(style="font-size: 18px;")= "Runway picked (corresponding to array above) = "
+           b= data[4]
+
+
+        br
+        br
+        a(href="/") Click here to start another query
+        br

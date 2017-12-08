@@ -10,6 +10,8 @@ var index = require('./routes/index');
 var result = require('./routes/result');
 var result_display = require('./routes/result_display');
 var error_route = require('./routes/error');
+var extended = require('./routes/extended');
+var extended_data = require('./routes/extended_data');
 
 var app = express();
 
@@ -30,6 +32,8 @@ app.use('/', index);
 app.use('/result', result);
 app.use('/result_display', result_display);
 app.use('/error', error_route);
+app.use('/extended', extended);
+app.use('/extended_data', extended_data);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

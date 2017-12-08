@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 _ = require('underscore');
-
 var middleware = require('./middleware');
 
 
