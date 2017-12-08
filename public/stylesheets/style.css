@@ -30,7 +30,7 @@ body {
     animation-iteration-count: 1;
 }
 #result_display {
-    padding-top: 5%;
+    padding-top: 2%;
     position:fixed;
     top:0;
     bottom:0;
@@ -64,6 +64,10 @@ a:hover {
 h1 {
 
     padding: 40px;
+}
+#result_display h1 {
+    padding: 20px;
+    margin-top: -20px;
 }
 h2 {
     padding-top: 15%;
