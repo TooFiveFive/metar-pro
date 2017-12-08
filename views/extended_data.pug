@@ -4,19 +4,22 @@ block content
     div(id="ext")
         h1= title
         p(style="font-size: 18px;")= "Raw METAR = "
-            b= data[0]
+            b= metar
         br
         p(style="font-size: 18px;")= "Wind direction (degrees)= "
-            b= data[1]
+            b= wind_dir
         br
         p(style="font-size: 18px;")= "Wind speed (knots) = "
-            b= data[2]
+            b= wind_speed
         br
-        p(style="font-size: 18px;")= "Runway headers (degrees) = "
-            b= data[3]
+        p(style="font-size: 18px;")= "Runway headers (degrees) (Runway numbers used are just for illustrating runway choice below) = "
+            -for (var i = 0; i < runway_dir.length; i++)
+                br
+                b= "Runway No. " + (i + 1) + " - " + runway_dir[i]
+
         br
         p(style="font-size: 18px;")= "Runway picked (corresponding to array above) = "
-           b= data[4]
+           b= "Runway No. " + runway_picked
 
 
         br
