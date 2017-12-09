@@ -129,7 +129,7 @@ input[type="submit"]:focus {
 }
 #credits {
     position : relative;
-    margin-top : 50%;
+    margin-top : 40%;
     color :rgb(150,205,215);
     font-family : Futura, sans-serif;
     font-size : 120%;
@@ -153,11 +153,14 @@ input[type="submit"]:focus {
     display : none;
 }
 .move{
+
     display : block !important;
     position : fixed;
+    left : 50%;
+    margin-left : -400px;
     animation-name : kek1;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
 }
 @keyframes kek1{
     0% {top:150%;}
