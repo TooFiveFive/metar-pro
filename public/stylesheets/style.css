@@ -145,10 +145,11 @@ input[type="submit"]:focus {
     animation-iteration-count : infinite;
 }
 #partyyyy{
+    position : fixed;
     display : none;
 }
 .move{
-    display : block;
+    display : block !important;
     position : fixed;
     animation-name : kek1;
     animation-duration: 4s;
