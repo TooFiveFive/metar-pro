@@ -123,3 +123,38 @@ input[type="submit"] {
 input[type="submit"]:focus {
     outline: none;
 }
+#credits {
+    position : relative;
+    margin-top : 50%;
+    color :rgb(150,205,215);
+    font-family : Futura, sans-serif;
+    font-size : 120%;
+}
+#credits input{
+    border : 1px solid black;
+}
+@keyframes kek {
+    0% {background-color: white;color : black;top:2px;}
+    50% {background-color: rgb(100,100,100);color : white;bottom:2px;}
+    100% {background-color: white;color : black;top:2px;}
+}
+#credits input:hover{
+    position : relative;
+    animation-name: kek;
+    animation-duration: 0.5s;
+    animation-iteration-count : infinite;
+}
+#partyyyy{
+    display : none;
+}
+.move{
+    display : block;
+    position : fixed;
+    animation-name : kek1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes kek1{
+    0% {top:150%;}
+    100% {top:-150%;}
+}
