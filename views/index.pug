@@ -12,3 +12,16 @@ block content
             if (!el || !el.value) return;
             el.value = el.value.toUpperCase();
         }
+        function party() {
+           // document.getElementById("partyyyy").className = ("move");
+             var element = document.getElementById("partyyyy");
+             element.classList.add("move");
+        }
+
+block credits
+    div(id = "credits")
+        h3 &copy Created by Eric, Alex, and Jacob in 2017
+        br
+        h3(style='margin-bottom : 10px;') Thank us with this button! :)
+        input(type='submit', value='Press', onclick='party')
+        img(src='../stylesheets/partyyyy.png', id='partyyyy')
