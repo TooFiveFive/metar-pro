@@ -9,4 +9,5 @@
 
 ## Run:
 - `./run.bat`
+- If program responds with `METAR-PRO IS RUNNING`, go to `localhost:3000` in a browser.
 
