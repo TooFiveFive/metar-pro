@@ -1,5 +1,12 @@
-# metar-pro
+# metar-pro - Runway Predictor
 
-node -v = 8.9.1
+## Check versions:
+- `node -v = 8.9.1`
+- `python -V = 3.6.3`
 
-python -v = 3.6.3
+## Add dependencies:
+- `npm install`
+
+## Run:
+- `./run.bat`
+
