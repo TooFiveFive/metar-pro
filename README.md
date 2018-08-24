@@ -1,4 +1,4 @@
-# metar-pro - Runway Predictor
+# *METAR-PRO* - Runway Predictor
 **METAR-PRO** is a Web App designed to predict what runway a plane will land on using current data. The landing direction is then illustrated using Google Maps Api. 
 
 ## Check versions:
